@@ -1,35 +1,39 @@
-set nocompatible
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-call vundle#end()
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'thinca/vim-ref'
+Plugin 'mhinz/vim-mix-format'
+Plugin 'ycm-core/YouCompleteMe'
 
-filetype plugin on
+call vundle#end()            " required
 
+filetype on
+syntax on
+set wildmenu
 set number
+set path+=**
+
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
 set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
 set shiftwidth=2
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_browse_split = 1
-let g:netrw_winsize = 25
-let g:vim_markdown_folding_disabled = 1
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+set clipboard=unnamed
 
-nnoremap <C-b> :Explore<CR>
+let g:mix_format_on_save = 1
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
-:syntax on
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
