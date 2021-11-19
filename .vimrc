@@ -59,7 +59,7 @@ nnoremap <C-f> :LspDocumentFormat<Cr>
 noremap <C-d> :LspPeekDefinition<cr>
 
 " Python mappings
-au FileType python setlocal formatprg=autopep8\ --aggressive\ --aggressive\ -
+au FileType python setlocal formatprg=black -
 if executable('pyls')
     " pip install python-language-server
     au User lsp_setup call lsp#register_server({
