@@ -1,5 +1,18 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+alias pip="pip3"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias tls="tmux ls"
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias tk="tmux kill -t"
+
+alias jnb="jupyter notebook"
+
 export ZSH="/Users/lukewood/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
@@ -19,8 +32,6 @@ alias mine="sudo chown $(whoami)"
 
 
 source "$HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-alias pip="pip3"
-
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -28,3 +39,5 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+git config --global submodule.recurse true
