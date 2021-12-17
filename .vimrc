@@ -1,22 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'mattn/vim-lsp-settings'
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'elixir-editors/vim-elixir'
-
-call vundle#end()            " required
-
 filetype on
 syntax on
 set wildmenu
@@ -59,64 +43,5 @@ nnoremap <C-f> :LspDocumentFormat<Cr>
 noremap <C-d> :LspPeekDefinition<cr>
 
 " Python mappings
-au FileType python setlocal formatprg=black -
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
-if executable('typescript-language-server')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'typescript support using typescript-language-server',
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-    \ 'whitelist': ['typescript', 'typescript.tsx', 'typescriptreact'],
-    \ })
-else
-  echohl ErrorMsg
-  echom 'Sorry, `typescript-language-server` is not installed. See :h vim-lsp-typescript for more details on setup.'
-  echohl NONE
-endif
-
-
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> <f2> <plug>(lsp-rename)
-    " refer to doc to add more commands
-endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
-
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> <f2> <plug>(lsp-rename)
-    " refer to doc to add more commands
-endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
-
-augroup tsx
-  au!
-  autocmd BufNewFile,BufRead *.tsx   set syntax=typescript
-augroup END
-
+au FileType python setlocal formatprg=black\ -
 autocmd FileType python nnoremap <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
-
-filetype plugin on
-
