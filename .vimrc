@@ -116,3 +116,7 @@ augroup tsx
   autocmd BufNewFile,BufRead *.tsx   set syntax=typescript
 augroup END
 
+autocmd FileType python nnoremap <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
+
+filetype plugin on
+
