@@ -13,7 +13,7 @@ alias tk="tmux kill -t"
 
 alias jnb="jupyter notebook"
 
-export ZSH="/Users/lukewood/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 plugins=(git)
@@ -30,7 +30,6 @@ bindkey -v
 
 alias mine="sudo chown $(whoami)"
 
-
 source "$HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 if type brew &>/dev/null; then
@@ -41,3 +40,5 @@ if type brew &>/dev/null; then
 fi
 
 git config --global submodule.recurse true
+git config --global user.email "lukewoodcs@gmail.com"
+git config --global user.name "Luke Wood"
