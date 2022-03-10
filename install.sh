@@ -9,5 +9,4 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo "source $SCRIPT_DIR/.zshrc" >> $HOME/.zshrc
 echo "source $SCRIPT_DIR/.vimrc" >> $HOME/.vimrc
 echo "source $SCRIPT_DIR/.bashrc" >> $HOME/.bashrc
-
-cp .tmux.conf ~/.tmux.conf
+echo "source-file $SCRIPT_DIR/.tmux.conf" >> $HOME/.tmux.conf
