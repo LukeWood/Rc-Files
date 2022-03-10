@@ -41,7 +41,6 @@ inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 au FileType python setlocal formatprg=black\ -
 autocmd FileType python nnoremap <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
 
-let fts = ['py']
-if index(fts, &filetype) == -1
+if (&ft=='py')
   :set colorcolumn=88
 endif
