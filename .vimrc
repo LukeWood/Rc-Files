@@ -37,11 +37,11 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
-nnoremap <C-f> :LspDocumentFormat<Cr>
-
-" lsp mappigns
-noremap <C-d> :LspPeekDefinition<cr>
-
 " Python mappings
 au FileType python setlocal formatprg=black\ -
 autocmd FileType python nnoremap <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
+
+let fts = ['py']
+if index(fts, &filetype) == -1
+  :set colorcolumn=88
+endif
