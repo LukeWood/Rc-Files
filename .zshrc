@@ -15,7 +15,7 @@ alias jnb="jupyter notebook"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -28,15 +28,6 @@ HISTFILE=~/.cache/zsh/history
 bindkey -v
 
 alias mine="sudo chown $(whoami)"
-
-source "$HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
 
 git config --global submodule.recurse true
 git config --global user.email "lukewoodcs@gmail.com"
