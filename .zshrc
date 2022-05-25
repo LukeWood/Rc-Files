@@ -15,7 +15,7 @@ alias jnb="jupyter notebook"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-vim-mode)
 
 source $ZSH/oh-my-zsh.sh
 
