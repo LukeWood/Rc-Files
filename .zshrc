@@ -1,5 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+alias python="python3"
 alias pip="pip3"
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -8,7 +9,7 @@ alias ....='cd ../../..'
 alias tls="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
-alias tk="tmux kill -t"
+alias tk="tmux kill-session -t"
 
 alias jnb="jupyter notebook"
 
@@ -37,6 +38,4 @@ function replace() {
   find . -type f -not -path '*/\.git/*' -print0 | xargs -0 sed -i '' -e s/$1/$2/g
 }
 
-export LC_CTYPE=C 
-export LANG=C
-
+export PATH="$PATH:$HOME/Library/Python/3.9/bin/"
