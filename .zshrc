@@ -1,5 +1,3 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 alias python="python3"
 alias pip="pip3"
 alias ..='cd ..'
@@ -38,4 +36,8 @@ function replace() {
   find . -type f -not -path '*/\.git/*' -print0 | xargs -0 sed -i '' -e s/$1/$2/g
 }
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:$HOME/Library/Python/3.9/bin/"
