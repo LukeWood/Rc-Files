@@ -38,6 +38,7 @@ function replace() {
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=~/.local/bin:$PATH
+export PATH=~/bin:$PATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:$HOME/Library/Python/3.9/bin/"
