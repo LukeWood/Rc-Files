@@ -42,3 +42,5 @@ export PATH=~/bin:$PATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:$HOME/Library/Python/3.9/bin/"
+export TF_CPP_MIN_LOG_LEVEL=3
+export AUTOGRAPH_VERBOSITY=0
