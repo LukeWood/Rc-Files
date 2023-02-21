@@ -30,4 +30,6 @@ brew install --cask iterm2
 brew install zsh
 brew install gh
 brew install tmux
+brew install --cask spectacle
+brew install --cask atom
 ```
