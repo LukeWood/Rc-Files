@@ -20,4 +20,5 @@ cd dot-files
 
 ```bash
 brew install --cask iterm2
+brew install zsh
 ```
