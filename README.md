@@ -6,3 +6,9 @@ I don't like redoing my rc files so now they're set up every time.
 
 - https://www.spectacleapp.com/
 - https://brew.sh/
+
+# Other Installations
+
+```bash
+brew install --cask iterm2
+```
