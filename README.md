@@ -25,6 +25,7 @@ cd dot-files
 - https://brew.sh/
 - https://github.com/bootandy/dust
 - https://github.com/muesli/duf
+- https://github.com/sharkdp/bat
 
 # Other Installations
 
