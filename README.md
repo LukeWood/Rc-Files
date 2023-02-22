@@ -22,6 +22,8 @@ cd dot-files
 
 - https://www.spectacleapp.com/
 - https://brew.sh/
+- https://github.com/bootandy/dust
+- https://github.com/muesli/duf
 
 # Other Installations
 
