@@ -1,5 +1,5 @@
-alias python="python3"
-alias pip="pip3"
+alias python="python3.10"
+alias pip="pip3.10"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
