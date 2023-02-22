@@ -16,6 +16,7 @@ mkdir workspace
 cd workspace
 git clone https://github.com/lukewood/dot-files
 cd dot-files
+./setup.sh
 ```
 
 # Downloads
