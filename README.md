@@ -36,6 +36,10 @@ brew install gh
 brew install tmux
 brew install --cask spectacle
 brew install --cask atom
+
+brew install git
+brew tap microsoft/git
+brew install --cask git-credential-manager-core
 ```
 
 # Pip packages
