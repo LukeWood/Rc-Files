@@ -37,3 +37,11 @@ brew install tmux
 brew install --cask spectacle
 brew install --cask atom
 ```
+
+# Pip packages
+
+```bash
+pip install jupyterlab
+pip install notebook
+pip install matplotlib
+```
