@@ -45,6 +45,11 @@ brew tap microsoft/git
 brew install --cask git-credential-manager-core
 ```
 
+TensorFlow Macbook:
+```
+pip install tensorflow-macos
+```
+
 # Pip packages
 
 ```bash
