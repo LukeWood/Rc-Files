@@ -1,22 +1,24 @@
-# Rc-Files
+# dot-Files
 This exists in case I need to setup a new computer.
 I don't like redoing my rc files so now they're set up every time.
-
-# Other
-
-Git setup:
-```
-git config --global user.name "Luke Wood"
-git config --global user.email "lukewoodcs@gmail.com"
-git config --global credential.helper cache
-```
 
 ```
 mkdir workspace
 cd workspace
 git clone https://github.com/lukewood/dot-files
 cd dot-files
+cp ./tmux.conf ~/
+# for some reason sourcing gets broken for tmux at times
 ./setup.sh
+```
+
+# Git Setup
+
+Git setup:
+```
+git config --global user.name "Luke Wood"
+git config --global user.email "lukewoodcs@gmail.com"
+git config --global credential.helper cache
 ```
 
 # Downloads
