@@ -27,16 +27,17 @@ cd dot-files
 - https://github.com/muesli/duf
 - https://github.com/sharkdp/bat
 
-# Other Installations
+# MacOS Installations
 
 ```bash
 brew install --cask iterm2
 brew install zsh
+brew install imagemagick
 brew install gh
 brew install tmux
 brew install --cask spectacle
 brew install --cask atom
-
+brew install --cask mactex
 brew install git
 brew tap microsoft/git
 brew install --cask git-credential-manager-core
