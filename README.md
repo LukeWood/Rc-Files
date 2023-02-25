@@ -43,6 +43,7 @@ brew install --cask mactex
 brew install git
 brew tap microsoft/git
 brew install --cask git-credential-manager-core
+brew install pandoc
 ```
 
 TensorFlow Macbook:
