@@ -44,6 +44,7 @@ brew install git
 brew tap microsoft/git
 brew install --cask git-credential-manager-core
 brew install git-lfs
+brew install gcc
 brew install pandoc
 ```
 
