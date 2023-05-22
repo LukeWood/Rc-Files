@@ -17,7 +17,7 @@ cp ./tmux.conf ~/
 Git setup:
 ```
 git config --global user.name "Luke Wood"
-git config --global user.email "lukewoodcs@gmail.com"
+git config --global user.email "EMAIL"
 git config --global credential.helper cache
 ```
 
