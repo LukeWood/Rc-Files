@@ -59,3 +59,13 @@ pip install jupyterlab
 pip install notebook
 pip install matplotlib
 ```
+
+# Nodejs
+
+```bash
+brew install node
+```
+
+```
+npm install -g yarn
+```
