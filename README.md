@@ -46,6 +46,7 @@ brew install --cask git-credential-manager-core
 brew install git-lfs
 brew install gcc
 brew install pandoc
+brew install python@3.10
 ```
 
 TensorFlow Macbook:
