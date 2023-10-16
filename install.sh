@@ -1,5 +1,5 @@
 #!/bin/bash
-git config --global credential.helper store
+# git config --global credential.helper store
 
 # sudo apt install zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

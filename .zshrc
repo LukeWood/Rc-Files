@@ -1,5 +1,3 @@
-alias python="python3.10"
-alias pip="pip3.10"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -49,3 +47,8 @@ if [ -e /opt/homebrew/bin/brew ]
 then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+alias plist="sudo lsof -n -i :80 | grep LISTEN"
+
+alias yarn="yarn --network-timeout=10000000"
+export PATH="$PATH:/Users/lukewood/workspace/dot-files/lbin"

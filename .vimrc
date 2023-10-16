@@ -40,6 +40,7 @@ inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 " Python mappings
 au FileType python setlocal formatprg=black\ -
 autocmd FileType python nnoremap <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
+" autocmd BufWritePost *.py execute <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
 
 if (&ft=='py')
   :set colorcolumn=88
