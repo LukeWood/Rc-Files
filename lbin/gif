@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+ffmpeg -i $1 "${1%.*}.gif"

@@ -50,5 +50,4 @@ fi
 
 alias plist="sudo lsof -n -i :80 | grep LISTEN"
 
-alias yarn="yarn --network-timeout=10000000"
 export PATH="$PATH:/Users/lukewood/workspace/dot-files/lbin"

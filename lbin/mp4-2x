@@ -4,5 +4,5 @@ if [ $# -lt 1 ]; then
     exit 1
 fi
 
-ffmpeg -i $1 -vf "setpts=2*PTS,minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=60'"  "${1%.*}.mp4"
+ffmpeg -i $1 -vf "setpts=0.5*PTS,minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=60'"  "${1%.*}-2x.mp4"
 
