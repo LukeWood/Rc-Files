@@ -6,6 +6,9 @@ alias tls="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
+function tcd() {                                                                                                              
+  tmux command-prompt -I $(pwd) "attach -c %1"                                                                                
+}
 
 alias jnb="jupyter notebook"
 
