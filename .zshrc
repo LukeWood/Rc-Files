@@ -54,3 +54,5 @@ fi
 alias plist="sudo lsof -n -i :80 | grep LISTEN"
 
 export PATH="$PATH:/Users/lukewood/workspace/dot-files/lbin"
+
+alias chrome-no-fr='open -a "Google Chrome" --args --disable-gpu-vsync --disable-frame-rate-limit'

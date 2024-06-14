@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+if [ $# -lt 1 ]; then
+    echo "Provide a file name please."
+    exit 1
+fi
+
+convert -background none -gravity center $1 -resize 500x500 -extend 500x500 "${1%.*}-512.png"
