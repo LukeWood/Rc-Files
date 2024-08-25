@@ -31,14 +31,8 @@ nnoremap <C-l> <C-w>l
 " Vim markdown
 let g:vim_markdown_folding_disabled = 1
 
-" trigger autocomplete 
-" autocomplete tabs
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-
 " Python mappings
-au FileType python setlocal formatprg=black\ -
+" # au FileType python setlocal formatprg=black\ -
 autocmd FileType python nnoremap <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
 " autocmd BufWritePost *.py execute <buffer> <C-f> :w<CR>:!black %<CR>:e<CR>
 

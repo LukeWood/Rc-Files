@@ -6,9 +6,18 @@ alias tls="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
-function tcd() {                                                                                                              
-  tmux command-prompt -I $(pwd) "attach -c %1"                                                                                
+
+alias gc="git add . && git commit -m 'x' && git push"
+
+function tcd() {
+  tmux command-prompt -I $(pwd) "attach -c %1" 
 }
+
+export PNPM_HOME="/Users/lukewood/Library/pnpm"
+case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+      *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
 
 alias jnb="jupyter notebook"
 
@@ -54,5 +63,9 @@ fi
 alias plist="sudo lsof -n -i :80 | grep LISTEN"
 
 export PATH="$PATH:/Users/lukewood/workspace/dot-files/lbin"
-
 alias chrome-no-fr='open -a "Google Chrome" --args --disable-gpu-vsync --disable-frame-rate-limit'
+
+export YETI_DEBUG=yeti-debug-true 
+
+alias screenshots="cd && cd screenshots"
+alias scrn="cd && cd screenshots"
